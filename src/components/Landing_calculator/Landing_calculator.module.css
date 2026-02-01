@@ -1,0 +1,250 @@
+.cac_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4.5rem 2rem;
+    background-color: #e8f1f5;
+}
+.cac_content{
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.grid {
+    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 20px;
+  align-items: start;
+}
+.grid h2{
+    font-family: playfair display, serif;
+    font-size: 40px;
+    margin-bottom: 15px;
+    max-width: 470px;
+    line-height: 40px;
+    color:#222;
+}
+.grid p{
+    max-width: 400px;
+    font-size: 18px;
+    font-family: poppins, sans-serif;
+    color:#222;
+}
+.eyebrow {
+  font-size: 14px;
+  color: #c88a65;
+  display: block;
+  font-family:poppins, sans-serif;
+  margin-bottom: 10px;
+}
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form input {
+  height: 45px;
+  width: 100%;
+  padding: 0 18px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background: #ffffff;
+    border-radius: 5px;
+}
+
+.form input::placeholder {
+  color: #000;
+}
+
+.form button {
+  height: 45px;
+   color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border-radius: 5px;
+  background:#c88a65;
+  border: unset;
+  font-family: poppins, sans-serif;
+}
+
+/* RESULTS */
+.results {
+  width: 100%;
+  margin-top: 40px;
+  padding: 3rem;
+  background: #ffffff;
+  animation: slideUp 0.4s ease;
+  border-radius: 10px;
+}
+
+.results h3 {
+  font-size: 35px;
+  font-family: playfair display, serif;
+  color: #222;
+  margin-bottom: 5px;
+}
+.results p{
+    font-family: poppins, sans-serif;
+    font-size: 16px;
+    color: #222;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.cards div {
+  background: #f3f3f3;
+  padding: 12px 24px;
+  border-radius: 5px;
+}
+
+.cards span {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.cards strong {
+  font-size: 28px;
+}
+
+.note {
+  font-size: 16px;
+  color: #444;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.error {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #c0392b;
+}
+
+/* RESULTS HEADER */
+.header {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.grade {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #000000;
+  color: #fff;
+  font-size: 32px;
+  font-family: playfair display, serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width:1000px){
+  .cac_container{
+    padding: 2rem 1rem;
+}
+.cac_content{
+  max-width: 600px;
+}
+.grid{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.grid > div{
+   width: 100%;
+    max-width: unset;
+}
+.grid > div > h2, .grid > div > p{
+  max-width: unset;
+}
+.form{
+  max-width: unset;
+  width: 100%;
+}
+}
+@media screen and (max-width:630px){
+  .grid h2{
+   font-size: 30px;
+   line-height: unset;
+   margin-bottom:unset;
+  }
+  .eyebrow{
+    margin-bottom: 5px;
+  }
+  .grid p{
+   display: none;
+  }
+  .form button {
+    height: unset;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+  .form input{
+    height: unset;
+    padding: 10px 15px;
+  }
+  /* feedback panel */
+  .results{
+    padding: 1rem 0rem;
+    background-color: unset;
+    border-top: 2px solid gray;
+    border-radius:unset
+  }
+  .results h3{
+    font-size: 30px;
+  }
+  .grade{
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+  }
+  .header{
+    gap: 0rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    flex-direction: column;
+
+  }
+  .cards{
+    gap: 0;
+  }
+  .cards div{
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .cards div strong{
+    font-size: 22px;
+  }
+  .cards div:nth-child(2),
+  .cards div:nth-child(3){
+display: none  }
+}
