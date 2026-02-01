@@ -14,7 +14,7 @@ const Landing_intro = () => {
             <Link href="/contact" className={styles.intro_cta}>Get a Free Audit</Link>
             <Link href="/services" className={styles.intro_cta}>Calculate my profit leak</Link>
             </div>
-            <p className={styles.intro_compliance}><Image src="/gdpr_logo.png" alt="GDPR" width={27} height={27} /> GDPR compliant <FaLock />DPA compliant</p>
+            <p className={styles.intro_compliance}><Image src="/public/gdpr_logo.png" alt="GDPR" width={27} height={27} /> GDPR compliant <FaLock />DPA compliant</p>
          
         </div>
         
