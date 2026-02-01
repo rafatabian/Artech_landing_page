@@ -10,7 +10,7 @@ const Landing_own_services = () => {
     <div className={styles.services_container}>
       <div className={styles.services_content}>
         <div className={styles.services_text}>
-           <h2 className={styles.services_title}>The Artech Engine <Image src="./public/owr_services_logo.png" alt="Artech Engine" width={55} height={35}/></h2>
+           <h2 className={styles.services_title}>The Artech Engine <Image src="./owr_services_logo.png" alt="Artech Engine" width={55} height={35}/></h2>
            <p>The system that manages and automastes your bookings while saving you time and money</p>
         </div>
 

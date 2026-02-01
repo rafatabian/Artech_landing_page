@@ -78,7 +78,7 @@ const Landing_faq = () => {
         <Image
           width={300}
           height={400}
-          src="./public/faq.jpg"
+          src="./faq.jpg"
           alt="help"
           className={styles.help_img_appear}
         />
