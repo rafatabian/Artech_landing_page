@@ -39,8 +39,8 @@ export default function Home() {
     <Home_Intro />
     <Home_Solutions />
     <Landing_calculator />
+        <Landing_Girls />
     <Landing_Owr_Services />
-    <Landing_Girls />
     <Landing_Plans />
     <Landing_Faq />
     <Landing_CTA />

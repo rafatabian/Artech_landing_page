@@ -3,6 +3,7 @@ import styles from './Landing_faq.module.css'
 import Image from 'next/image'
 import { useState } from 'react'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
+import faq_img from "../../../public/faq.jpg"
 
 const Question = ({ question, answer, color }) => {
   const [open, setOpen] = useState(false);
@@ -78,7 +79,7 @@ const Landing_faq = () => {
         <Image
           width={300}
           height={400}
-          src="./faq.jpg"
+          src={faq_img}
           alt="help"
           className={styles.help_img_appear}
         />

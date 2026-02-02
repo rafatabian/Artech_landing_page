@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react';
 import emailjs from "@emailjs/browser";
+import footer_img from "../../../public/footer_logo.png"
 
 const Landing_footer = () => {
     const initialEmailData = {
@@ -41,7 +42,7 @@ const Landing_footer = () => {
       <div className={styles.landing_footer_content}>
        <div className={styles.landing_footer_first_container}>
         {/* logo */}
-         <div><Image src="./footer_logo.png" alt="logo" width={300} height={150}/></div>
+         <div><Image src={footer_img} alt="logo" width={300} height={150}/></div>
          {/* links */}
          <div>
            <Link href="https://www.facebook.com/profile.php?id=61561101313220">Facebook</Link>
