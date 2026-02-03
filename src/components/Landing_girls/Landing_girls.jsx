@@ -9,7 +9,7 @@ const Landing_girls = () => {
       <video
         controls // Adds play/pause and volume buttons
         playsInline
-        poster="/images/landing_video_prefixer.png"
+        poster="./images/landing_video_prefixer.png"
        className={styles.videoElement}
 >
   <source src={`./landing_video.mp4`} type="video/mp4" />
