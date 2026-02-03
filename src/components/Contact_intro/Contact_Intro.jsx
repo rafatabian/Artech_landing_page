@@ -2,7 +2,13 @@ import styles from "./Contact_Intro.module.css";
 import { IoStar } from "react-icons/io5";
 import Image from 'next/image';
 import dynamic from "next/dynamic";
-
+import cori_img from "../../../public/images/corina.jpeg"
+import maysa_img from "../../../public/images/maysa.jpeg"
+import ahmed_img from "../../../public/images/ahmed.jpeg"
+import george_img from "../../../public/images/george.jpeg"
+import google_logo_img from "../../../public/images/google_logo.png"
+import meta_logo_img from "../../../public/images/meta_logo.png"
+import gdpr_logo from "../../../public/images/gdpr_logo.png"
 
 const ContactForm = dynamic(() =>
   import("../../components/Contact_form/Contact_form")
@@ -21,26 +27,26 @@ const ContactIntro = () => {
                 <IoStar />
                 <IoStar />
                 <IoStar />
-                <Image src="/images/corina.jpeg" alt="5 star reviews"
+                <Image src={cori_img} alt="5 star reviews"
                   width={35}
                   height={35}
                 />
-                 <Image src="/images/maysa.jpeg" alt="5 star reviews"
+                 <Image src={maysa_img} alt="5 star reviews"
                   width={35}
                   height={35}
                 />
-                 <Image src="/images/ahmed.jpeg" alt="5 star reviews"
+                 <Image src={ahmed_img} alt="5 star reviews"
                   width={35}
                   height={35}
                 />
-                 <Image src="/images/george.jpeg" alt="5 star reviews"
+                 <Image src={george_img} alt="5 star reviews"
                   width={35}
                   height={35}
                 />
                 <p>Excellent</p>
               </div>
-                 <p>Certified Google Ads<Image width={29} height={29} src="/images/google_logo.png" alt="google logo"/>and Meta Ads<Image width={40} height={40} src="/images/meta_logo.png" alt="meta logo"/> professionals</p>
-                 <span><Image width={30} height={30} src="/images/gdpr_logo.png" alt="gdpr logo"/>GDPR compliant</span>
+                 <p>Certified Google Ads<Image width={29} height={29} src={google_logo_img} alt="google logo"/>and Meta Ads<Image width={40} height={40} src={meta_logo_img} alt="meta logo"/> professionals</p>
+                 <span><Image width={30} height={30} src={gdpr_logo} alt="gdpr logo"/>GDPR compliant</span>
             </div>
             <div className={styles.contact_intro_second}>
             <ContactForm />
