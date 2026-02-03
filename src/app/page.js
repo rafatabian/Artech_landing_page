@@ -2,9 +2,6 @@
 import dynamic from "next/dynamic";
 import { useRef } from "react";
 
-const Navbar = dynamic(() => 
-  import("../components/Landing_navbar/Landing_navbar")
-);
 const Home_Intro = dynamic(() =>
   import("../components/Landing_intro/Landing_intro")
 );
@@ -41,7 +38,6 @@ export default function Home() {
 
   return (
     <>
-    <Navbar />
     <Home_Intro onScrollToCalc={scrollToCalculator}/>
     <Home_Solutions />
     <Landing_calculator ref={calculatorRef}/>

@@ -20,11 +20,15 @@ export const metadata = {
 const Landing_footer = dynamic(() =>
   import("../components/Landing_footer/Landing_footer")
 );
+const Navbar = dynamic(() => 
+  import("../components/Landing_navbar/Landing_navbar")
+);
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Navbar />
         {children}
         <Landing_footer/>
       </body>
