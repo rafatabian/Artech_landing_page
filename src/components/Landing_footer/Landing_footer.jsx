@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react';
 import emailjs from "@emailjs/browser";
-import footer_img from "../../../public/footer_logo.png"
+import footer_img from "../../../public/images/footer_logo.png"
 
 const Landing_footer = () => {
     const initialEmailData = {
@@ -47,8 +47,8 @@ const Landing_footer = () => {
          <div>
            <Link href="https://www.facebook.com/profile.php?id=61561101313220">Facebook</Link>
             <Link href="https://www.instagram.com/artech.agency1?igsh=cDFycG50ZnVlZDFi">Instagram</Link>
-          <Link href="/">Privacy Policy</Link>
-          <Link href="/">Terms and Conditions</Link>
+          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/terms">Terms and Conditions</Link>
           <p>business@artech-agency.co</p>
          </div>
         </div>

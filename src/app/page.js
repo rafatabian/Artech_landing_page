@@ -1,5 +1,6 @@
-import styles from "./page.module.css";
+"use client"
 import dynamic from "next/dynamic";
+import { useRef } from "react";
 
 const Navbar = dynamic(() => 
   import("../components/Landing_navbar/Landing_navbar")
@@ -28,23 +29,27 @@ const Landing_Faq = dynamic(() =>
 const Landing_CTA = dynamic(() =>
   import("../components/Landing_CTA/Landing_CTA")
 );
-const Landing_footer = dynamic(() =>
-  import("../components/Landing_footer/Landing_footer")
-);
 
 export default function Home() {
+  const calculatorRef = useRef(null)
+
+  const scrollToCalculator = () => {
+     if(calculatorRef.current){
+      calculatorRef.current.scrollIntoView({behavior: "smooth"})
+     }
+  }
+
   return (
     <>
     <Navbar />
-    <Home_Intro />
+    <Home_Intro onScrollToCalc={scrollToCalculator}/>
     <Home_Solutions />
-    <Landing_calculator />
-        <Landing_Girls />
+    <Landing_calculator ref={calculatorRef}/>
+    <Landing_Girls />
     <Landing_Owr_Services />
     <Landing_Plans />
     <Landing_Faq />
     <Landing_CTA />
-    <Landing_footer />
     </>
     
   );

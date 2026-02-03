@@ -8,7 +8,7 @@ const Landing_CTA = () => {
    <div className={styles.landing_cta_container}>
        <div className={styles.landing_cta_content}>
          <h2>Make impossible grow feel possible with Artech </h2>
-         <Link href={`tel:${phone_number}`} >Book a call</Link> 
+         <Link href="/contact" >Book a call</Link> 
        </div>
     </div>
   )

@@ -95,6 +95,7 @@ font-family: poppins, sans-serif;
 
 .ctaButton {
   background: #2563eb;
+  text-decoration: unset;
   color: white;
   padding: 1rem 2rem;
   border-radius: 8px;
@@ -140,13 +141,13 @@ font-family: poppins, sans-serif;
 }
 @media screen and (max-width:630px){
       .container{
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
     max-width: 600px;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 2rem;
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
     box-shadow: unset;
     border: unset;
   }

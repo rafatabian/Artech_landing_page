@@ -109,6 +109,9 @@
 }
 }
 @media screen and (max-width:630px){
+    .landing_footer_container{
+        padding: 2rem 1rem;
+    }
 .landing_footer_first_container > div:first-child > img{
     max-width: 180px;
 }

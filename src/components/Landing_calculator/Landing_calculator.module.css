@@ -189,6 +189,9 @@
 }
 }
 @media screen and (max-width:630px){
+  .cac_container{
+   padding: 4rem 1rem;
+  }
   .grid h2{
    font-size: 30px;
    line-height: unset;

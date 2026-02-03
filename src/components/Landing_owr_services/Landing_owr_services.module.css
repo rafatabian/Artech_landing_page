@@ -107,6 +107,9 @@
 }
 }
 @media screen and (max-width:630px){
+    .services_container{
+        padding: 4rem 1rem;
+    }
     .services_text h2{
      font-size: 35px;
     }

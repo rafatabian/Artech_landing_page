@@ -45,9 +45,11 @@
     }
 }
 @media screen and (max-width:630px){
+    .landing_cta_container{
+      padding: 4rem 1rem;
+    }
     .landing_cta_content{
         max-width: 600px;
-        padding: 2rem 2rem 2.5rem 2rem;
     }
     .landing_cta_content > h2{
         margin-bottom: 1.5rem;

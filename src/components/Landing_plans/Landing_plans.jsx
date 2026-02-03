@@ -1,5 +1,7 @@
 "use client"
 import styles from './Landing_plans.module.css'
+import Link from 'next/link';
+
 const plans = [
   {
     title: 'Foundation',
@@ -61,9 +63,9 @@ const Landing_plans = () => {
 
             <div className={styles.price}>{plan.price}</div>
 
-            <button className={styles.button}>
+            <Link href="/contact" className={styles.button}>
               {plan.price === 'Custom Quote' ? 'Contact Us' : 'Get Started'}
-            </button>
+            </Link>
 
             <div className={styles.includes}>This includes:</div>
 

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { FaCalendarAlt } from "react-icons/fa";
 import { TbPigMoney } from "react-icons/tb";
 import { IoIosTime } from "react-icons/io";
-import services_img from "../../../public/owr_services_logo.png"
+import services_img from "../../../public/images/owr_services_logo.png"
 
 const Landing_own_services = () => {
 

@@ -3,7 +3,7 @@ import styles from './Landing_faq.module.css'
 import Image from 'next/image'
 import { useState } from 'react'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
-import faq_img from "../../../public/faq.jpg"
+import faq_img from "../../../public/images/faq.jpg"
 
 const Question = ({ question, answer, color }) => {
   const [open, setOpen] = useState(false);

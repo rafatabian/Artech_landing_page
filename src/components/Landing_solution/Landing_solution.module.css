@@ -88,8 +88,12 @@
 }
 }
 @media screen and (max-width:630px){
+  .solution_container{
+    padding: 4rem 1rem;
+  }
 .section h2{
   font-size: 30px;
+  font-weight: bold;
 }
 .row p{
   font-size: 1rem;

@@ -57,19 +57,21 @@
     max-width: 600px;
     margin-bottom: 1rem;
 }
-.intro_text > div a{
+.intro_text > div a,
+.intro_text > div button{
     text-decoration: none;
     padding: 0.7rem 1.5rem;
     border-radius: 5px;
     font-family: poppins, sans-serif;
     font-weight: 500;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 .intro_text > div a:nth-child(1){
     color: white;
     background: #C88A65;
 }
-.intro_text > div a:nth-child(2){
+.intro_text > div button:nth-child(2){
     color: #C88A65;
     background-color: transparent;
     border: 2px solid #C88A65;
@@ -78,7 +80,7 @@
     width: 45%;
     height: 70%;
     border-radius: 15px;
-    background: url(../../../public/landing_intro_img.jpg);
+    background: url(../../../public/images/landing_intro_img.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -120,6 +122,9 @@
     }
 }
 @media screen and (max-width:630px){
+.intro_container{
+    padding: 4rem 1rem 5rem 1rem;
+}
    .intro_image{
      width: 100%;
      height: 300px;

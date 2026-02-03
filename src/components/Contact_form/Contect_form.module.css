@@ -1,0 +1,139 @@
+/* popup styles */
+.contact_confirmation{
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact_confirmation > button{
+    position: absolute;
+    right: 4rem;
+    top: 2rem;
+    padding: 10px;
+    background:none;
+    border: none;
+    cursor: pointer;
+}
+.contact_confirmation > img{
+    max-width: 180px;
+    margin: 0rem 0;
+}
+.contact_confirmation > h1{
+    font-size: 20px;
+    font-family: playfair display, sans-serif;
+    color: #333333;
+    /* font-weight: 400; */
+    margin-bottom: 0.2rem;
+}
+.contact_confirmation > h2{
+    font-size: 18px;
+    font-family: playfair display, sans-serif;
+    color: #333333;
+    /* font-weight: 400; */
+}
+.contact_privacy_label{
+    width: 100%;
+    font-family: poppins, sans-serif;
+}
+.contact_privacy_label > span{
+   font-size: 14px;
+   color: black;
+   margin-left: 3px;
+}
+.contact_privacy_label > span a{
+   color: rgb(0, 116, 233);
+   text-decoration: underline;
+}
+/* new css */
+.visually_hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.contact_desctiption > textarea{
+    color: #222;
+    width: 100%;
+    /* max-width: 350px; */
+    font-family: poppins, sans-serif;
+    background-color: #fff;
+    border: 1px solid #afafaf;
+    padding: .6rem 1rem;
+    font-size: 16px;
+    border-radius: 5px;
+}
+/* textarea::placeholder{
+  font-family: var(--font-fam);
+} */
+.contact_desctiption > textarea:focus,
+.input:focus,
+.input_date_time:focus{
+    outline: 0.5px solid var(--green);
+}
+.input{
+    color: #222;
+    width: 100%;
+    height: 40px;
+    /* max-width: 350px; */
+    font-family: poppins, sans-serif;
+    background-color: #fff;
+    border: 1px solid #afafaf;
+    padding: 0 1rem;
+    font-size: 16px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.contact_date_time_container{
+ width: 100%;
+ display: flex;
+ gap: 0.5rem;
+    margin: 5px 0;
+}
+.input_date_time{
+    color: #222;
+    height: 40px;
+    width: 100%;
+    font-family: poppins, sans-serif;
+    background-color: #fff;
+    border: 1px solid #afafaf;
+    padding: 0 1rem;
+    font-size: 16px;
+        border-radius: 5px;
+}
+.contact_button_book{
+    margin-top: 1rem;
+    background-color: rgb(39, 39, 149);
+    color: white;
+    font-family: poppins, sans-serif;
+    font-size: 16px;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    cursor: pointer;
+        border-radius: 5px;
+}
+@media screen and (max-width:1139px){
+    .contact_confirmation{
+          min-height: unset;
+    }
+    .form{
+    width: 100%;
+    }
+}
+@media screen and (max-width:700px){
+.contact_desctiption > textarea, .input, .input_date_time{
+    color: black;
+    border: 1px solid rgb(0, 0, 0);
+}
+/* textarea::placeholder, .input::placeholder, .input_date_time::placeholder{
+  color: rgb(77, 77, 77);
+} */
+}

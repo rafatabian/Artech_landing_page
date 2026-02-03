@@ -1,4 +1,5 @@
 import styles from "./Landing_girls.module.css"
+import Link from "next/link";
 
 const Landing_girls = () => {
   return (
@@ -8,7 +9,7 @@ const Landing_girls = () => {
       <video
         controls // Adds play/pause and volume buttons
         playsInline
-        poster="./landing_video_prefixer.png"
+        poster="/images/landing_video_prefixer.png"
        className={styles.videoElement}
 >
   <source src={`./landing_video.mp4`} type="video/mp4" />
@@ -37,9 +38,9 @@ const Landing_girls = () => {
           </li>
         </ul>
 
-        <button className={styles.ctaButton}>
+        <Link href="/contact" className={styles.ctaButton}>
           Get a free audit
-        </button>
+        </Link>
         {/* <p className={styles.landing_girls_note}>To ensure every clinic gets our full creative energy, we strictly limit ourselves to 2 new projects per month</p> */}
       </div>
     </section>

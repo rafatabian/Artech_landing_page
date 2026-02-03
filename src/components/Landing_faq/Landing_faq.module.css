@@ -155,6 +155,9 @@
     }
 }
 @media screen and (max-width:630px){
+    .help_container{
+        padding: 4rem 1rem;
+    }
 .help_question_title > h1{
    font-size: 30px;
 }

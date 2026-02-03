@@ -1,15 +1,16 @@
 "use client"
 import styles from './Landing_calculator.module.css'
-import { useState } from 'react'
+import { forwardRef, useState } from 'react'
 
-const Landing_calculator = () => {
+// Fix: Am adăugat parantezele (props, ref) => ...
+const Landing_calculator = forwardRef((props, ref) => {
    const [adsSpend, setAdsSpend] = useState('');
-  const [customers, setCustomers] = useState('');
-  const [email, setEmail] = useState('');
-  const [errors, setErrors] = useState({});
-  const [showResults, setShowResults] = useState(false);
+   const [customers, setCustomers] = useState('');
+   const [email, setEmail] = useState('');
+   const [errors, setErrors] = useState({});
+   const [showResults, setShowResults] = useState(false);
 
-  const validate = () => {
+   const validate = () => {
     const newErrors = {};
 
     if (!adsSpend || Number(adsSpend) <= 0) {
@@ -45,59 +46,48 @@ const Landing_calculator = () => {
       return {
         grade: 'A',
         title: 'Excellent performance',
-        text:
-          'Your system is elite. You are likely using automation and have a high-converting front desk.',
+        text: 'Your system is elite. You are likely using automation and have a high-converting front desk.',
       };
     }
-
     if (cac <= 80) {
       return {
         grade: 'B',
         title: 'Good, but improvable',
-        text:
-          'You are "holding steady," but likely losing 20-30% of your ad spend to slow follow-ups.',
+        text: 'You are "holding steady," but likely losing 20-30% of your ad spend to slow follow-ups.',
       };
     }
-
     if (cac <= 140) {
       return {
         grade: 'C',
         title: 'High leakage detected',
-        text:
-          'You are overpaying for patients. Your "manual" booking process is killing your margins.',
+        text: 'You are overpaying for patients. Your "manual" booking process is killing your margins.',
       };
     }
-
     return {
       grade: 'D',
       title: 'Critical revenue loss',
-      text:
-        'Your ad budget is being vaporized. You are likely paying for clicks that never even reach your front desk.',
+      text: 'Your ad budget is being vaporized. You are likely paying for clicks that never even reach your front desk.',
       };
   };
 
   const gradeData = getGradeData();
 
   return (
-    <div className={styles.cac_container}>
+    <div className={styles.cac_container} ref={ref}>
      <div className={styles.cac_content}>
       <div className={styles.grid}>
-        {/* LEFT */}
         <div>
           <span className={styles.eyebrow}>
             Customer Acquisition Cost Calculator (CAC)
           </span>
           <h2>
-            What is Your Lead to <br/>Patient
-            Leakage Score?
+            What is Your Lead to <br/>Patient Leakage Score?
           </h2>
           <p>
-            Input your monthly ads spend and bookings to see exactly how much
-            revenue is slipping through your current system.
+            Input your monthly ads spend and bookings to see exactly how much revenue is slipping through your current system.
           </p>
         </div>
 
-        {/* RIGHT */}
         <form className={styles.form} onSubmit={handleSubmit} noValidate>
           <div>
             <input
@@ -139,7 +129,6 @@ const Landing_calculator = () => {
         </form>
       </div>
 
-      {/* RESULTS */}
       {showResults && (
         <div className={styles.results}>
           <div className={styles.header}>
@@ -155,12 +144,10 @@ const Landing_calculator = () => {
               <span>Cost per patient</span>
               <strong>£{cac.toFixed(2)}</strong>
             </div>
-
             <div>
               <span>Monthly ad spend</span>
               <strong>£{adsSpend}</strong>
             </div>
-
             <div>
               <span>New patients</span>
               <strong>{customers}</strong>
@@ -168,14 +155,16 @@ const Landing_calculator = () => {
           </div>
 
           <p className={styles.note}>
-            Clinics with automated booking and instant response systems
-            typically reduce CAC by 25–40%.
+            Clinics with automated booking and instant response systems typically reduce CAC by 25–40%.
           </p>
         </div>
       )}
       </div>
       </div>
   );
-}
+}); // <-- Închidem paranteza de la forwardRef
 
-export default Landing_calculator
+// Important: Dăm un nume componentei pentru debugging în React DevTools
+Landing_calculator.displayName = "Landing_calculator";
+
+export default Landing_calculator;

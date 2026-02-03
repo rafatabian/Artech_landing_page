@@ -72,6 +72,11 @@
   font-size: 15px;
   cursor: pointer;
   margin-bottom: 30px;
+  text-decoration: unset;
+  font-family: poppins, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .highlighted .button {
@@ -128,7 +133,7 @@
 }
 @media screen and (max-width:1000px){
   .section{
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
   }
   .grid {
   max-width: 600px;

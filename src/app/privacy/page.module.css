@@ -1,0 +1,41 @@
+
+.privacy_container{
+    padding: 130px 1rem 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f9f9f9;
+}
+.privacy_container > h1,
+.privacy_container > h2,
+.privacy_container > p{
+   font-family: Roboto;
+   max-width: 600px;
+   width: 100%;
+     font-family: var(--font-fam);
+}
+.privacy_container > h1{
+    font-size: 30px;
+    font-weight: 500;
+    color: #222222;
+}
+.privacy_container > h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: #222222;
+    margin-top:30px ;
+}
+.privacy_container > p{
+  font-size: 16px;
+  color: black;
+}
+.privacy_policy_link{
+    color: rgb(0, 89, 255) !important;
+      font-family: var(--font-fam);
+}
+@media screen and (max-width:970px){
+    .privacy_container{
+        padding: 6rem 1rem 2rem 1rem;
+    }
+}
