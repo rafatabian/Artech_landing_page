@@ -135,6 +135,8 @@
 }
 .intro_text > h1{
   font-size: 35px;
+  font-family: poppins, sans-serif;
+  font-weight: 500;
 }
 .intro_text > h2{
   font-size: 18px;

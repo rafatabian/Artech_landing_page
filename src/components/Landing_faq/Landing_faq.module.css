@@ -160,6 +160,7 @@
     }
 .help_question_title > h1{
    font-size: 30px;
+  font-family: poppins, sans-serif;
 }
 .help_question_title{
     width: 100%;

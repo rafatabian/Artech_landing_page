@@ -111,7 +111,8 @@
         padding: 4rem 1rem;
     }
     .services_text h2{
-     font-size: 35px;
+     font-size: 30px;
+     font-family: poppins, sans-serif;
     }
     .services_title > img{
         width: 50px;
@@ -121,9 +122,10 @@
         font-size: 1rem;
     }
     .pillar > div > h3{
-        font-size: 28px;
+        font-size: 24px;
         /* text-decoration: underline; */
         margin-bottom: -10px;
+      font-family: poppins, sans-serif;
         
     }
      .landing_our_services_icons_div > svg{
@@ -135,4 +137,22 @@
      .pillar > div > p{
         display: none;
      }
+     .pillar{
+        flex-direction: row-reverse;
+        margin: 0.5rem 0;
+     }
+     .landing_our_services_icons_div{
+        width: unset;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+      .landing_our_services_icons_div > svg{
+        width: 30px ;
+        height: 30px;
+      }
+      .pillar div:nth-child(1){
+        padding: 0;
+      }
 }

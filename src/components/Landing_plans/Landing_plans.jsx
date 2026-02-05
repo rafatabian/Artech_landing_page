@@ -31,7 +31,7 @@ const plans = [
   {
     title: 'Market Leader',
     subtitle: 'Best for multi-surgery groups.',
-    price: '6,495',
+    price: '£6,495',
     highlighted: false,
     features: [
       { text: 'Custom Multi-Page Funnel', included: true },

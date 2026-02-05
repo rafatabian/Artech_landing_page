@@ -164,4 +164,8 @@ font-family: poppins, sans-serif;
     .girls_content > div{
         width: 100%;
     }
+    .heading{
+      font-family: poppins, sans-serif;
+      font-size: 30px;
+    }
 }
