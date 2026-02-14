@@ -14,9 +14,6 @@ const Landing_calculator = dynamic(() =>
 const Landing_Owr_Services = dynamic(() =>
   import("../components/Landing_owr_services/Landing_own_services")
 );
-const Landing_Girls = dynamic(() =>
-  import("../components/Landing_girls/Landing_girls")
-);
 const Landing_Plans = dynamic(() =>
   import("../components/Landing_plans/Landing_plans")
 );
