@@ -1,6 +1,29 @@
-"use client"
-import styles from './Landing_plans.module.css'
+"use client";
+
+import styles from './Landing_plans.module.css';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+// motion
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, 
+      delayChildren: 0.1, 
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 }, 
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.6, ease: "easeOut" } 
+  },
+};
 
 const plans = [
   {
@@ -42,21 +65,35 @@ const plans = [
   },
 ];
 
-
 const Landing_plans = () => {
   return (
     <section className={styles.section}>
-      <div className={styles.grid}>
+      <motion.div 
+        className={styles.grid}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }} 
+        variants={containerVariants}
+      >
         {plans.map((plan, i) => (
-          <div
+          <motion.div
             key={i}
+            variants={itemVariants}
+            whileHover={{ 
+              y: -10, 
+              transition: { duration: 0.3 } 
+            }}
             className={`${styles.card} ${
               plan.highlighted ? styles.highlighted : ''
             }`}
           >
             <div className={styles.header}>
               <h3>{plan.title}</h3>
-              {plan.badge && <span className={styles.badge}>{plan.badge}</span>}
+              {plan.badge && (
+                <span className={styles.badge}>
+                  {plan.badge}
+                </span>
+              )}
             </div>
 
             <p className={styles.subtitle}>{plan.subtitle}</p>
@@ -85,11 +122,11 @@ const Landing_plans = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
 
-export default Landing_plans
+export default Landing_plans;

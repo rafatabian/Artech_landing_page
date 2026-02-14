@@ -3,11 +3,11 @@ import Link from "next/link";
 
 const Landing_girls = () => {
   return (
-   <section className={styles.container}>
+  <section className={styles.container}>
       {/* Video Side */}
       <div className={styles.videoWrapper}>
       <video
-        controls // Adds play/pause and volume buttons
+        controls 
         playsInline
         poster="./images/landing_video_prefixer.png"
        className={styles.videoElement}
@@ -41,9 +41,9 @@ const Landing_girls = () => {
         <Link href="/contact" className={styles.ctaButton}>
           Get a free audit
         </Link>
-        {/* <p className={styles.landing_girls_note}>To ensure every clinic gets our full creative energy, we strictly limit ourselves to 2 new projects per month</p> */}
       </div>
     </section>
+ 
   );
 }
 

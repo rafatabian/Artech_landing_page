@@ -1,6 +1,6 @@
 import styles from "./Landing_navbar.module.css";
 import Image from "next/image";
-import logo from "../../../public/images/landing_logo.jpg"
+import logo from "../../../public/images/landing_logo.png"
 
 const Landing_navbar = () => {
   return (

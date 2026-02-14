@@ -68,13 +68,15 @@
    color: white;
   font-size: 16px;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: 0.3s;
   border-radius: 5px;
   background:#c88a65;
   border: unset;
   font-family: poppins, sans-serif;
 }
-
+.form button:hover {
+  background: #b57a56; 
+}
 /* RESULTS */
 .results {
   width: 100%;

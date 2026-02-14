@@ -65,16 +65,23 @@
     font-family: poppins, sans-serif;
     font-weight: 500;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
+    transition: 0.3s;
 }
 .intro_text > div a:nth-child(1){
     color: white;
     background: #C88A65;
 }
+.intro_text > div a:nth-child(1):hover{
+     background: #b57a56; 
+}
 .intro_text > div button:nth-child(2){
     color: #C88A65;
     background-color: transparent;
     border: 2px solid #C88A65;
+}
+.intro_text > div button:nth-child(2):hover{
+    color: #bf9276;
+    border: 2px solid #bf9276;
 }
 .intro_image{
     width: 45%;

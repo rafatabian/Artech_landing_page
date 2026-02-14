@@ -82,8 +82,12 @@
 .highlighted .button {
   background: #c88a65;
   color: white;
-}
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
+}
+.button:hover {
+  background: #b57a56; 
+}
 /* FEATURES */
 .includes {
   font-weight: bold;

@@ -41,7 +41,7 @@ export default function Home() {
     <Home_Intro onScrollToCalc={scrollToCalculator}/>
     <Home_Solutions />
     <Landing_calculator ref={calculatorRef}/>
-    <Landing_Girls />
+    {/* <Landing_Girls /> */}
     <Landing_Owr_Services />
     <Landing_Plans />
     <Landing_Faq />
