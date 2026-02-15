@@ -101,6 +101,18 @@ export default function Terms() {
     courts.
   </p>
 
+  <h2>Use of the Calculator</h2>
+  <p>The CAC Calculator provided on our website is for informational and estimation purposes only. The results are based on the data you provide and do not constitute professional financial advice.</p>
+
+  <h2>Accuracy of Results</h2>
+  <p>While we strive for accuracy, Artech-Agency does not guarantee that the results provided by the calculator are error-free or applicable to your specific business situation. We are not liable for any business decisions made based on these calculations.</p>
+
+  <h2>Data Submission</h2>
+  <p>By using this calculator, you agree that the information you provide is accurate to the best of your knowledge.</p>
+
+  <h2>Limitation of Liability</h2>
+  <p>To the maximum extent permitted by law, Artech-Agency shall not be liable for any indirect or consequential loss or damage arising from the use of this calculator.</p>
+
   {/* --------------------- GUARANTEE SECTION --------------------- */}
 
   <h2>Performance Investment Guarantee</h2>

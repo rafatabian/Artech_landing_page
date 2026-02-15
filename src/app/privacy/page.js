@@ -32,6 +32,9 @@ export default function Privacy() {
     <br /><br />
     Marketing preferences (opt-in or opt-out)
   </p>
+  <p>We collect the following information when you use our calculator:</p>
+  <p>1 Business Data: Total ad spend and number of clients (used to calculate your results).</p>
+  <p>Contact Data: Your email address.</p>
 
   <h2>3. Purpose and Legal Basis for Processing</h2>
   <p>
@@ -67,10 +70,6 @@ export default function Privacy() {
   <p>
     We implement appropriate technical and organizational measures to protect your data, including:
     <br /><br />
-    Encryption
-    <br />
-    Secure servers
-    <br />
     Access control
     <br />
     Regular security assessments
@@ -80,7 +79,7 @@ export default function Privacy() {
 
   <h2>6. Data Storage & International Transfers</h2>
   <p>
-    Your personal data is stored on secure servers located within the European Union (EU).
+    Your personal data is stored on secure computers located within the UK.
     <br /><br />
     We do not transfer your personal information outside the EU/EEA.
     <br />
