@@ -3,6 +3,7 @@
 import styles from './Landing_calculator.module.css';
 import { forwardRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import emailjs from "@emailjs/browser";
 
 const Landing_calculator = forwardRef((props, ref) => {
   const [adsSpend, setAdsSpend] = useState('');
@@ -10,6 +11,11 @@ const Landing_calculator = forwardRef((props, ref) => {
   const [email, setEmail] = useState('');
   const [errors, setErrors] = useState({});
   const [showResults, setShowResults] = useState(false);
+  //state for checkbox
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [optInMarketing, setOptInMarketing] = useState(false);
+
+
 
   const validate = () => {
     const newErrors = {};
@@ -20,6 +26,10 @@ const Landing_calculator = forwardRef((props, ref) => {
     } else if (!/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = 'Please enter a valid email address.';
     }
+// Terms Validation
+    if (!agreedToTerms) {
+      newErrors.terms = "Please agree to the terms to proceed.";
+    }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -28,6 +38,27 @@ const Landing_calculator = forwardRef((props, ref) => {
     e.preventDefault();
     if (!validate()) return;
     setShowResults(true);
+    // Construct the data object
+    const emailData = {
+      user_email: email,                
+      total_spend: adsSpend,          
+      new_patients: customers,          
+      newsletter_opt_in: optInMarketing ? "YES" : "NO", 
+    };
+    // sending mail
+    emailjs.send(
+      "service_vztopwc",
+      "template_qocrcqn",
+      emailData,
+      { publicKey: "3EZTg7KvgmPiXOfnr" }
+    )
+    // testing to see if send or not 
+    .then((result) => {
+        console.log("Email sent successfully:", result.text);
+    })
+    .catch((error) => {
+        console.error("Email failed to send:", error);
+    });
   };
 
   const cac = showResults ? Number(adsSpend) / Number(customers) : 0;
@@ -118,7 +149,35 @@ const itemVariants = {
               />
               {errors.email && <span className={styles.error}>{errors.email}</span>}
             </div>
-
+          {/* checkboxes */}
+<div className={styles.legalSection}>
+          {/* MANDATORY CHECKBOX */}
+          <div className={styles.checkboxWrapper}>
+            <input 
+              type="checkbox" 
+              id="terms" 
+              checked={agreedToTerms}
+              onChange={(e) => setAgreedToTerms(e.target.checked)}
+              required
+            />
+            <label htmlFor="terms">
+              I agree to the <a href="/terms">Terms & Conditions</a> and <a href="/privacy">Privacy Policy</a>. <span className={styles.required}>*</span>
+            </label>
+          </div>
+{errors.terms && <span className={styles.error}>{errors.terms}</span>}
+          {/* OPTIONAL MARKETING CHECKBOX */}
+          <div className={styles.checkboxWrapper}>
+            <input 
+              type="checkbox" 
+              id="marketing" 
+              checked={optInMarketing}
+              onChange={(e) => setOptInMarketing(e.target.checked)}
+            />
+            <label htmlFor="marketing">
+              Send me free growth tips and dental industry benchmarks.
+            </label>
+          </div>
+        </div>
             <motion.button 
               type="submit"
             >

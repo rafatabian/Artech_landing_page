@@ -50,10 +50,10 @@ export default function Contact() {
       {confirmation ? (
         <div className={styles.contact_confirmation}>
           <Image
-            src="/images/navbar_white_logo.webp"
+            src="/images/footer_logo.png"
             alt="logo"
-            width={200}
-            height={60}
+            width={180}
+            height={90}
             priority
           />
           <h1>Thank you for your time!</h1>
@@ -141,7 +141,7 @@ export default function Contact() {
           </div>
 
           <button type="submit" className={styles.contact_button_book}>
-            Book my free call
+            Book my free audit
           </button>
         </form>
       )}

@@ -126,7 +126,30 @@
   font-size: 16px;
   color: #444;
 }
-
+.checkboxWrapper{
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: flex-start;
+   flex-direction: row;
+   margin: 0.3rem 0;
+}
+.checkboxWrapper input{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.checkboxWrapper label{
+  font-family: poppins, sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+}
+.checkboxWrapper label a{
+  color: #333;
+}
 @keyframes slideUp {
   from {
     opacity: 0;

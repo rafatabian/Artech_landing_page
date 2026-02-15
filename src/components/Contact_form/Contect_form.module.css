@@ -18,34 +18,34 @@
     border: none;
     cursor: pointer;
 }
+
 .contact_confirmation > img{
     max-width: 180px;
     margin: 0rem 0;
 }
 .contact_confirmation > h1{
     font-size: 20px;
-    font-family: playfair display, sans-serif;
+    font-family: "playfair display", sans-serif;
     color: #333333;
-    /* font-weight: 400; */
     margin-bottom: 0.2rem;
 }
 .contact_confirmation > h2{
     font-size: 18px;
-    font-family: playfair display, sans-serif;
+    font-family: "playfair display", sans-serif;
     color: #333333;
-    /* font-weight: 400; */
 }
 .contact_privacy_label{
     width: 100%;
     font-family: poppins, sans-serif;
+    margin-top: 0.5rem;
 }
 .contact_privacy_label > span{
    font-size: 14px;
-   color: black;
+   color: #333;
    margin-left: 3px;
 }
 .contact_privacy_label > span a{
-   color: rgb(0, 116, 233);
+   color: #333;
    text-decoration: underline;
 }
 /* new css */
@@ -63,7 +63,6 @@
 .contact_desctiption > textarea{
     color: #222;
     width: 100%;
-    /* max-width: 350px; */
     font-family: poppins, sans-serif;
     background-color: #fff;
     border: 1px solid #afafaf;
@@ -71,19 +70,10 @@
     font-size: 16px;
     border-radius: 5px;
 }
-/* textarea::placeholder{
-  font-family: var(--font-fam);
-} */
-.contact_desctiption > textarea:focus,
-.input:focus,
-.input_date_time:focus{
-    outline: 0.5px solid var(--green);
-}
 .input{
     color: #222;
     width: 100%;
     height: 40px;
-    /* max-width: 350px; */
     font-family: poppins, sans-serif;
     background-color: #fff;
     border: 1px solid #afafaf;
@@ -111,14 +101,17 @@
 }
 .contact_button_book{
     margin-top: 1rem;
-    background-color: rgb(39, 39, 149);
+    background-color:#c88a65;
     color: white;
     font-family: poppins, sans-serif;
     font-size: 16px;
     padding: 0.8rem 2.5rem;
     border: none;
     cursor: pointer;
-        border-radius: 5px;
+    border-radius: 5px;
+}
+.contact_button_book:hover{
+  background: #b57a56; 
 }
 @media screen and (max-width:1139px){
     .contact_confirmation{
@@ -128,12 +121,4 @@
     width: 100%;
     }
 }
-@media screen and (max-width:700px){
-.contact_desctiption > textarea, .input, .input_date_time{
-    color: black;
-    border: 1px solid rgb(0, 0, 0);
-}
-/* textarea::placeholder, .input::placeholder, .input_date_time::placeholder{
-  color: rgb(77, 77, 77);
-} */
-}
+

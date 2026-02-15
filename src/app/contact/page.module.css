@@ -67,7 +67,7 @@
 .contact_phone_email div:nth-child(2) > svg {
     width: 26px;
     height: 26px;
-    color: var(--green);
+    color: #a77152;
     margin-right: 5px;
 }
 
@@ -80,27 +80,27 @@
 
 .contact_phone_email div:first-child > span > a,
 .contact_phone_email div:nth-child(2) > a {
-    font-family: var(--font-fam);
-    font-size: 15px;
+    font-family: poppins, sans-serif;
+    font-size: 0.9rem;
     color: #333333;
-    letter-spacing: 0.3px;
     text-decoration: none;
     cursor: pointer;
+    font-weight: 400;
 }
 .contact_note > p{
-    font-family: var(--font-fam);
-    font-size: 15px;
+    font-family: poppins, sans-serif;
+    font-size: 0.9rem;
     color: #000000;
-    letter-spacing: 0.2px;
     display: flex;
+    font-weight: 400;
     align-items: center;
     justify-content: center;
 }
 .contact_note > p svg{
     margin-right: 6px;
-     width: 23px;
+    width: 23px;
     height: 23px;
-    fill: gray;
+    color: #5d5d5d;
 }
 @media screen and (max-width: 1139px) {
        .contact_phone_email {
@@ -128,8 +128,5 @@
 
     .contact_phone_email > div:first-child {
         margin-bottom: 5px;
-    }
-    .contact_note > p{
-        font-size: 14px;
     }
 }

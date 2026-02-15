@@ -45,7 +45,7 @@ export default function Contact() {
             </a>
           </div>
             <div className={styles.contact_note}>
-          <p><FaCalendarAlt /> We only take on 5 new clients each month</p>
+          <p><FaCalendarAlt /> We only take on 3 new clients each month</p>
         </div>
         </div>
           <div className={styles.contact_faq_container}>

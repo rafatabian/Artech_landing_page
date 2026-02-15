@@ -84,7 +84,7 @@
     padding: 3rem;
     background-color: white;
     box-shadow: 0 4px 4px #0002;
-        border-radius: 10px;
+    border-radius: 10px;
 }
 @media screen and (max-width:1139px){
     .contact_intro_container{

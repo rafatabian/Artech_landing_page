@@ -14,6 +14,9 @@
     height:100%;
     max-width:1000px;
 }
+.navbar_logo_container > a {
+   text-decoration: none;
+}
 @media screen and (max-width:1000px){
 .navbar_container{
     padding: 0.5rem 1rem;

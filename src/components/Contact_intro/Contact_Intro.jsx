@@ -20,7 +20,7 @@ const ContactIntro = () => {
         <div className={styles.contact_intro_container}>
             <div className={styles.contact_intro_first}>
              <h1>Stop guessing. Start growing.</h1>
-             <h2>Book your free 15-minute call and get a clear, step-by-step plan to attract clients consistently</h2>
+             <h2>Book your free 15-minute call and get a clear, step-by-step plan to attract and book pacients on autopilot</h2>
              <div className={styles.contactIntroReviews}>
                 <IoStar />
                 <IoStar />
