@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react';
 import emailjs from "@emailjs/browser";
 import footer_img from "../../../public/images/footer_logo.png"
+import { track } from '@vercel/analytics';
 
 const Landing_footer = () => {
     const initialEmailData = {
@@ -45,10 +46,10 @@ const Landing_footer = () => {
          <div><Image src={footer_img} alt="logo" width={300} height={150}/></div>
          {/* links */}
          <div>
-           <Link href="https://www.facebook.com/profile.php?id=61561101313220">Facebook</Link>
-            <Link href="https://www.instagram.com/artech.agency1?igsh=cDFycG50ZnVlZDFi">Instagram</Link>
-          <Link href="/privacy">Privacy Policy</Link>
-          <Link href="/terms">Terms and Conditions</Link>
+           <Link href="https://www.facebook.com/profile.php?id=61561101313220" onClick={() => track("footer facebook", {location: "landing footer"})}>Facebook</Link>
+            <Link href="https://www.instagram.com/artech.agency1?igsh=cDFycG50ZnVlZDFi" onClick={() => track("footer instagram", {location: "landing footer"})}>Instagram</Link>
+          <Link href="/privacy" onClick={() => track("footer privacy policy", {location: "landing footer"})}>Privacy Policy</Link>
+          <Link href="/terms" onClick={() => track("footer terms and conditions", {location: "landing footer"})}>Terms and Conditions</Link>
           <p>business@artech-agency.co</p>
          </div>
         </div>

@@ -6,6 +6,15 @@ import Image from "next/image";
 import { FaLock } from "react-icons/fa";
 import gdpr_img from "../../../public/images/gdpr_logo.png";
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
+
+
+
+const Landing_intro = ({ onScrollToCalc }) => {
+  const handleClick = () => {
+ onScrollToCalc();
+  track("intro_calculate_profit_leak", {location: "landing_intro"});
+}
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -27,8 +36,6 @@ const itemVariants = {
     transition: { duration: 0.6, ease: "easeOut" } 
   },
 };
-
-const Landing_intro = ({ onScrollToCalc }) => {
   return (
     <div className={styles.intro_container}>
       <div className={styles.intro_content}>
@@ -49,10 +56,10 @@ const Landing_intro = ({ onScrollToCalc }) => {
           </motion.h2>
           
           <motion.div variants={itemVariants}>
-            <Link href="/contact" className={styles.intro_cta}>
+            <Link href="/contact" className={styles.intro_cta} onClick={() => track("intro free demo", {location: "landing_intro"})}>
               Get a Free Audit
             </Link>
-            <button className={styles.intro_cta} onClick={onScrollToCalc}>
+            <button className={styles.intro_cta} onClick={() => handleClick()}>
               Calculate my profit leak
             </button>
           </motion.div>

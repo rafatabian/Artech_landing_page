@@ -8,6 +8,7 @@ import { IoIosTime } from "react-icons/io";
 import services_img from "../../../public/images/owr_services_logo.png"
 import Link from 'next/link';
 import { motion } from "framer-motion";
+import { track } from "@vercel/analytics";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -82,7 +83,7 @@ const Landing_own_services = () => {
             </motion.ul>
 
             <motion.div variants={itemVariants}>
-                <Link href="/contact" className={styles.ctaButton}>
+                <Link href="/contact" className={styles.ctaButton} onClick={() => track("services get free audit", {location: "landing_girls"})}>
                 Get a free audit
                 </Link>
             </motion.div>

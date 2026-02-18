@@ -4,6 +4,8 @@ import styles from './Landing_calculator.module.css';
 import { forwardRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from "@emailjs/browser";
+import { track } from "@vercel/analytics";
+
 
 const Landing_calculator = forwardRef((props, ref) => {
   const [adsSpend, setAdsSpend] = useState('');
@@ -178,9 +180,7 @@ const itemVariants = {
             </label>
           </div>
         </div>
-            <motion.button 
-              type="submit"
-            >
+            <motion.button type="submit" onClick={() => track("calculator get score", {location: "landing_calculator"})}>
               Get your score
             </motion.button>
           </motion.form>

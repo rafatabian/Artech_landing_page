@@ -6,8 +6,9 @@ import { useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import faq_img from "../../../public/images/faq.jpg";
 import { motion, AnimatePresence } from 'framer-motion';
+import { track } from "@vercel/analytics"
 
-// 1. Move variants outside to prevent re-renders
+//motion
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -30,6 +31,12 @@ const itemVariants = {
 
 const Question = ({ question, answer, index }) => {
   const [open, setOpen] = useState(false);
+
+
+const handleQuestionClick = () => {
+  setOpen((prev) => !prev);
+  track(question, {location: "FAQ_Section"});
+}
 
   return (
     <motion.div

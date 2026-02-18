@@ -3,27 +3,8 @@
 import styles from './Landing_plans.module.css';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { track } from "@vercel/analytics"
 
-// motion
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2, 
-      delayChildren: 0.1, 
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 30 }, 
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.6, ease: "easeOut" } 
-  },
-};
 
 const plans = [
   {
@@ -66,6 +47,27 @@ const plans = [
 ];
 
 const Landing_plans = () => {
+  // motion
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2, 
+      delayChildren: 0.1, 
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 }, 
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.6, ease: "easeOut" } 
+  },
+};
+
   return (
     <section className={styles.section}>
       <motion.div 
@@ -100,7 +102,7 @@ const Landing_plans = () => {
 
             <div className={styles.price}>{plan.price}</div>
 
-            <Link href="/contact" className={styles.button}>
+            <Link href="/contact" className={styles.button} onClick={() => track(plan.title, {location: landing_plans})}>
               {plan.price === 'Custom Quote' ? 'Contact Us' : 'Get Started'}
             </Link>
 
