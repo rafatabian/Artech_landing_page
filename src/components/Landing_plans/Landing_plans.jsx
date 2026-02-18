@@ -102,7 +102,7 @@ const itemVariants = {
 
             <div className={styles.price}>{plan.price}</div>
 
-            <Link href="/contact" className={styles.button} onClick={() => track(plan.title, {location: landing_plans})}>
+            <Link href="/contact" className={styles.button} onClick={() => track(plan.title, {location: "landing_plans"})}>
               {plan.price === 'Custom Quote' ? 'Contact Us' : 'Get Started'}
             </Link>
 

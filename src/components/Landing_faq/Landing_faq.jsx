@@ -48,7 +48,7 @@ const handleQuestionClick = () => {
       <button
         type="button"
         className={styles.question_header}
-        onClick={() => setOpen((prev) => !prev)}
+        onClick={() => handleQuestionClick}
       >
         <p>{question}</p>
         <motion.div
