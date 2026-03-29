@@ -10,7 +10,7 @@ const plans = [
   {
     title: 'Foundation',
     subtitle: 'Best for new private clinics.',
-    price: '£1,495',
+    price: '£89/month',
     highlighted: false,
     features: [
       { text: 'High-Convert Website', included: true },
@@ -23,7 +23,7 @@ const plans = [
     title: 'Efficiency',
     badge: 'Recommended',
     subtitle: 'Best for scaling practices.',
-    price: '£2,495',
+    price: '£119/month',
     highlighted: true,
     features: [
       { text: 'High-Convert Website', included: true },
@@ -35,7 +35,7 @@ const plans = [
   {
     title: 'Market Leader',
     subtitle: 'Best for multi-surgery groups.',
-    price: '£6,495',
+    price: '£499/month',
     highlighted: false,
     features: [
       { text: 'Custom Multi-Page Funnel', included: true },
